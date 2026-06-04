@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Fira_Code } from "next/font/google";
-import { QueryProvider } from "./provider/QueryProvider";
+import Provider from "@/provider/QueryProvider";
 import "./globals.css";
 
 const barlowCondensed = Barlow_Condensed({
@@ -33,7 +33,7 @@ export default function RootLayout({
       className={`${barlowCondensed.variable} ${firaCode.variable} dark`}
     >
       <body>
-        <QueryProvider>{children}</QueryProvider>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
