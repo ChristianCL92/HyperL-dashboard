@@ -11,8 +11,14 @@ const usePerpState = (user: `0x${string}`) => {
     queryFn: () => infoClient.clearinghouseState({ user }),
     enabled: !!user,
   });
+
+  const hyperliquidOrderBook = infoClient.l2Book({
+    coin: "BTC",
+  });
+
   return {
     perps: { data: perps, isLoading: perpsLoading, error: perpsError },
+    l2Book: hyperliquidOrderBook,
   };
 };
 
