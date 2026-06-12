@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, Fira_Code } from "next/font/google";
+import { Barlow_Condensed, Fira_Code, Geist } from "next/font/google";
 import Provider from "@/provider/QueryProvider";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const barlowCondensed = Barlow_Condensed({
   weight: ["400", "500", "600", "700"],
@@ -30,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${barlowCondensed.variable} ${firaCode.variable} dark`}
+      className={cn("dark", barlowCondensed.variable, firaCode.variable, "font-sans", geist.variable)}
     >
       <body>
         <Provider>{children}</Provider>
