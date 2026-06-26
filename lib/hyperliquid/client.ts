@@ -11,6 +11,6 @@ export const infoClient = new InfoClient({
   transport: new HttpTransport({ isTestnet }),
 });
 
-const subscribe = new SubscriptionClient({
+export const subscribeClient = new SubscriptionClient({
   transport: new WebSocketTransport({ isTestnet }),
 });
