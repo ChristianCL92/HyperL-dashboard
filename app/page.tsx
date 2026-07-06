@@ -39,7 +39,6 @@ export default function Home() {
   const { perps } = usePerpState(user);
   const { l2Book, isLoadingOrderBook, orderBookError } = useL2BookState(coin);
   const meta = useL2BookGetCoinData();
-  console.log("meta data", meta);
 
   const isLoading = spot.isLoading || perps.isLoading;
   const summary = perps.data?.marginSummary;
