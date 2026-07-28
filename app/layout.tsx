@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Fira_Code, Geist } from "next/font/google";
 import Provider from "@/provider/QueryProvider";
+import "@rainbow-me/rainbowkit/styles.css";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
